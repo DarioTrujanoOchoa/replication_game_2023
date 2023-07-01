@@ -6,6 +6,7 @@ rm(list=ls())
 library(pacman)
 p_load(tidyverse)
 p_load(ggplot2)
+p_load(cowplot)
 
 # import data
 source("src/import_data.R")
@@ -36,15 +37,24 @@ bsr_info %>%
   summarise(prop_false_report = mean(false_report)) %>% 
   ggplot() + 
   geom_line(aes(x = period,y = prop_false_report)) +
-  ylim(0,1)
+  ylim(0,1) +
+  xlab("Period") +
+  ylab("Fraction of false reports") + 
+  scale_x_continuous(breaks = 1:10 ) +
+  theme_minimal_hgrid()
 
 # figure 2B
 bsr_info %>% 
   group_by(pur) %>% 
   summarise(prop_false_report = mean(false_report))%>% 
   ggplot() + 
-  geom_col(aes(x = pur,y = prop_false_report)) +
-  ylim(0,1)
+  geom_col(aes(x = factor(pur),y = prop_false_report)) +
+  ylim(0,1) +
+  xlab("Known prior of Red Urn") +
+  ylab("Fraction of false reports") +
+  theme_minimal_hgrid()
+
+
 
 # Learning for the 50% prior ----
 
@@ -91,7 +101,11 @@ bsr_info %>%
   summarise(prop_false_report = mean(false_report)) %>% 
   ggplot() + 
   geom_line(aes(x = period,y = prop_false_report)) +
-  ylim(0,1)
+  ylim(0,1) +
+  xlab("Period") +
+  ylab("Fraction of false reports") + 
+  scale_x_continuous(breaks = 1:10 ) +
+  theme_minimal_hgrid()
 
 # figure 2B
 bsr_info %>% 
@@ -99,6 +113,9 @@ bsr_info %>%
   group_by(pur) %>% 
   summarise(prop_false_report = mean(false_report))%>% 
   ggplot() + 
-  geom_col(aes(x = pur,y = prop_false_report)) +
-  ylim(0,1)
+  geom_col(aes(x = factor(pur),y = prop_false_report)) +
+  ylim(0,1) +
+  xlab("Known prior of Red Urn") +
+  ylab("Fraction of false reports") +
+  theme_minimal_hgrid()
 
