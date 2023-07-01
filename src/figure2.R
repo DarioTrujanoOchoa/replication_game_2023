@@ -1,11 +1,13 @@
 # Replication of Danz et al 2022 ----
 # Dario Trujano-Ochoa
 
+rm(list=ls())
+
 library(pacman)
 p_load(tidyverse)
 
-# Import data ----
-data.bsr.qsr <- read.csv("data/data-bsr-qsr.csv")
+# import data
+source("src/import_data.R")
 
 data.bsr.qsr <-
 data.bsr.qsr %>%
