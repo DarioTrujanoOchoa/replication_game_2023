@@ -48,10 +48,13 @@ ggsave("results/all_treatments_periods.pdf")
 ## figure 2B ----
 data.bsr.qsr %>% 
   filter(scoringrule == 1) %>% 
-  group_by(pur) %>% 
-  summarise(prop_false_report = mean(false_report))%>% 
+  group_by(pur,treatment) %>% 
+  summarise(prop_false_report = mean(false_report)) %>% 
   ggplot() + 
-  geom_col(aes(x = factor(pur),y = prop_false_report)) +
+  geom_col(aes(x =  factor(treatment),
+               y = prop_false_report,
+               fill = factor(pur) ),
+           position = "dodge") +
   ylim(0,1) +
   xlab("Known prior of Red Urn") +
   ylab("Fraction of false reports") +
@@ -88,10 +91,14 @@ bsr_info %>%
   geom_line(aes(x = order_prior,y = prior_stated))
 
 # Filter for the first round per prior ----
-## figure 2A ----
-data.bsr.qsr %>% 
+
+bsr_treatmens_first_round <- 
+  data.bsr.qsr %>% 
   filter(scoringrule == 1,
-         order_prior == 1) %>% 
+         order_prior == 1)
+
+## figure 2A ----
+bsr_treatmens_first_round %>% 
   group_by(period, treatment) %>% 
   summarise(prop_false_report = mean(false_report)) %>% 
   ggplot() + 
@@ -111,13 +118,14 @@ data.bsr.qsr %>%
 ggsave("results/all_treatments_periods_onr_round.pdf")
 
 ## figure 2B ----
-data.bsr.qsr %>% 
-  filter(scoringrule == 1,
-         order_prior == 1)  %>% 
-  group_by(pur) %>% 
-  summarise(prop_false_report = mean(false_report))%>% 
+bsr_treatmens_first_round %>% 
+  group_by(pur,treatment) %>% 
+  summarise(prop_false_report = mean(false_report)) %>% 
   ggplot() + 
-  geom_col(aes(x = factor(pur),y = prop_false_report)) +
+  geom_col(aes(x =  factor(treatment),
+               y = prop_false_report,
+               fill = factor(pur) ),
+           position = "dodge") +
   ylim(0,1) +
   xlab("Known prior of Red Urn") +
   ylab("Fraction of false reports") +
