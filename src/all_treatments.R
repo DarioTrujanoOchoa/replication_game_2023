@@ -1,5 +1,5 @@
 # Replication of Danz et al 2022 ----
-# Figure 2
+# All tretaments
 # Dario Trujano-Ochoa
 
 rm(list=ls())
@@ -14,31 +14,24 @@ source("src/import_data.R")
 
 # calculate rates of false reports
 data.bsr.qsr <-
-data.bsr.qsr %>%
-  mutate(false_report = (belief1 != pur))
-
-# data for BSR and information
-
-data.bsr.qsr %>% 
-  filter(scoringrule == 1, 
-         treatment == 1) %>% 
-  distinct(subjectid)
-
-bsr_info <-
-data.bsr.qsr %>% 
-  filter(scoringrule == 1, 
-         treatment == 1)
-
-# there are 60 participant in BSR-info condition
-bsr_info %>% distinct(subjectid)
+  data.bsr.qsr %>%
+  mutate(false_report = (belief1 != pur),
+         treatment = factor(treatment))
 
 # figure 2A
-bsr_info %>% 
-  group_by(period) %>% 
+data.bsr.qsr %>% 
+  filter(scoringrule == 1) %>% 
+  group_by(period, treatment) %>% 
   summarise(prop_false_report = mean(false_report)) %>% 
   ggplot() + 
-  geom_line(aes(x = period,y = prop_false_report)) +
-  ylim(0,1) +
+  geom_point(aes(x = period, 
+                y = prop_false_report,
+                color = treatment,
+                shape = treatment)) +
+  geom_line(aes(x = period, 
+                 y = prop_false_report,
+                 color = treatment)) +
+#  ylim(0,1) +
   xlab("Period") +
   ylab("Fraction of false reports") + 
   scale_x_continuous(breaks = 1:10 ) +
@@ -119,4 +112,3 @@ bsr_info %>%
   xlab("Known prior of Red Urn") +
   ylab("Fraction of false reports") +
   theme_minimal_hgrid()
-
