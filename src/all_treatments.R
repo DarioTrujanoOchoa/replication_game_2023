@@ -1,5 +1,5 @@
-# Replication of Danz et al 2022 ----
-# All tretaments
+# Replication of Danz et al. 2022 ----
+# All treatments
 # Dario Trujano-Ochoa
 
 rm(list=ls())
@@ -12,11 +12,17 @@ p_load(cowplot)
 # import data
 source("src/import_data.R")
 
-# calculate rates of false reports
+# calculate rates of false reports and Learning for the 50% prior ----
+
+## Assign the relative presentation order within each prior considered. ----
+
 data.bsr.qsr <-
   data.bsr.qsr %>%
   mutate(false_report = (belief1 != pur),
-         treatment = factor(treatment))
+         treatment = factor(treatment)) %>% 
+  group_by(subjectid,pur) %>% 
+  arrange(subjectid, period) %>% 
+  mutate(order_prior = 1:n())
 
 # figure 2A
 data.bsr.qsr %>% 
@@ -38,7 +44,8 @@ data.bsr.qsr %>%
   theme_minimal_hgrid()
 
 # figure 2B
-bsr_info %>% 
+data.bsr.qsr %>% 
+  filter(scoringrule == 1) %>% 
   group_by(pur) %>% 
   summarise(prop_false_report = mean(false_report))%>% 
   ggplot() + 
@@ -47,18 +54,6 @@ bsr_info %>%
   xlab("Known prior of Red Urn") +
   ylab("Fraction of false reports") +
   theme_minimal_hgrid()
-
-
-
-# Learning for the 50% prior ----
-
-## Assign the relative presentation order within each prior considered. ----
-bsr_info <- 
-  bsr_info %>% 
-  group_by(subjectid,pur) %>% 
-  arrange(subjectid, period) %>% 
-  mutate(order_prior = 1:n()) 
-
 
 # The number of rounds per prior is different for each prior.
 # 50% has a larger number of repetitions.
@@ -89,21 +84,29 @@ bsr_info %>%
 
 # Filter for the first round per prior ----
 # figure 2A
-bsr_info %>% 
-  filter(order_prior == 1) %>% 
-  group_by(period) %>% 
+data.bsr.qsr %>% 
+  filter(scoringrule == 1,
+         order_prior == 1) %>% 
+  group_by(period, treatment) %>% 
   summarise(prop_false_report = mean(false_report)) %>% 
   ggplot() + 
-  geom_line(aes(x = period,y = prop_false_report)) +
-  ylim(0,1) +
+  geom_point(aes(x = period, 
+                 y = prop_false_report,
+                 color = treatment,
+                 shape = treatment)) +
+  geom_line(aes(x = period, 
+                y = prop_false_report,
+                color = treatment)) +
+  #  ylim(0,1) +
   xlab("Period") +
   ylab("Fraction of false reports") + 
   scale_x_continuous(breaks = 1:10 ) +
   theme_minimal_hgrid()
 
 # figure 2B
-bsr_info %>% 
-  filter(order_prior == 1) %>% 
+data.bsr.qsr %>% 
+  filter(scoringrule == 1,
+         order_prior == 1)  %>% 
   group_by(pur) %>% 
   summarise(prop_false_report = mean(false_report))%>% 
   ggplot() + 
