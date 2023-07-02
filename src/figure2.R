@@ -32,7 +32,7 @@ data.bsr.qsr %>%
 # there are 60 participant in BSR-info condition
 bsr_info %>% distinct(subjectid)
 
-# figure 2A
+## figure 2A ----
 bsr_info %>% 
   group_by(period) %>% 
   summarise(prop_false_report = mean(false_report)) %>% 
@@ -44,7 +44,9 @@ bsr_info %>%
   scale_x_continuous(breaks = 1:10 ) +
   theme_minimal_hgrid()
 
-# figure 2B
+ggsave("results/fig2A_original.pdf")
+
+## figure 2B ----
 bsr_info %>% 
   group_by(pur) %>% 
   summarise(prop_false_report = mean(false_report))%>% 
@@ -55,7 +57,7 @@ bsr_info %>%
   ylab("Fraction of false reports") +
   theme_minimal_hgrid()
 
-
+ggsave("results/fig2B_original.pdf")
 
 # Learning for the 50% prior ----
 
@@ -95,7 +97,8 @@ bsr_info %>%
   geom_line(aes(x = order_prior,y = prior_stated))
 
 # Filter for the first round per prior ----
-# figure 2A
+
+## figure 2A ----
 bsr_info %>% 
   filter(order_prior == 1) %>% 
   group_by(period) %>% 
@@ -108,7 +111,9 @@ bsr_info %>%
   scale_x_continuous(breaks = 1:10 ) +
   theme_minimal_hgrid()
 
-# figure 2B
+ggsave("results/fig2A_one_round.pdf")
+
+## figure 2B ----
 bsr_info %>% 
   filter(order_prior == 1) %>% 
   group_by(pur) %>% 
@@ -119,4 +124,6 @@ bsr_info %>%
   xlab("Known prior of Red Urn") +
   ylab("Fraction of false reports") +
   theme_minimal_hgrid()
+
+ggsave("results/fig2B_one_round.pdf")
 
