@@ -24,7 +24,7 @@ data.bsr.qsr <-
   arrange(subjectid, period) %>% 
   mutate(order_prior = 1:n())
 
-# figure 2A
+## figure 2A ----
 data.bsr.qsr %>% 
   filter(scoringrule == 1) %>% 
   group_by(period, treatment) %>% 
@@ -43,7 +43,9 @@ data.bsr.qsr %>%
   scale_x_continuous(breaks = 1:10 ) +
   theme_minimal_hgrid()
 
-# figure 2B
+ggsave("results/all_treatments_periods.pdf")
+
+## figure 2B ----
 data.bsr.qsr %>% 
   filter(scoringrule == 1) %>% 
   group_by(pur) %>% 
@@ -54,6 +56,8 @@ data.bsr.qsr %>%
   xlab("Known prior of Red Urn") +
   ylab("Fraction of false reports") +
   theme_minimal_hgrid()
+
+ggsave("results/all_treatments_priors.pdf")
 
 # The number of rounds per prior is different for each prior.
 # 50% has a larger number of repetitions.
@@ -73,6 +77,7 @@ bsr_info %>%
   geom_line(aes(x = order_prior,y = prop_false_report)) +
   ylim(0,1)
 
+# Modify data to filter ----
 # Posterior Belief elicited.
 # The posterior belief should be around 50, however, there is clear trend downwards
 bsr_info %>% 
@@ -83,7 +88,7 @@ bsr_info %>%
   geom_line(aes(x = order_prior,y = prior_stated))
 
 # Filter for the first round per prior ----
-# figure 2A
+## figure 2A ----
 data.bsr.qsr %>% 
   filter(scoringrule == 1,
          order_prior == 1) %>% 
@@ -103,7 +108,9 @@ data.bsr.qsr %>%
   scale_x_continuous(breaks = 1:10 ) +
   theme_minimal_hgrid()
 
-# figure 2B
+ggsave("results/all_treatments_periods_onr_round.pdf")
+
+## figure 2B ----
 data.bsr.qsr %>% 
   filter(scoringrule == 1,
          order_prior == 1)  %>% 
@@ -115,3 +122,5 @@ data.bsr.qsr %>%
   xlab("Known prior of Red Urn") +
   ylab("Fraction of false reports") +
   theme_minimal_hgrid()
+
+ggsave("results/all_treatments_priors_one_round.pdf")
