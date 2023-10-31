@@ -260,7 +260,6 @@ data_panel_a_summary1__70$up <- data_panel_a_summary1__70$false_bool.mean + qt(0
 data_panel_a_summary1__70$low <- data_panel_a_summary1__70$false_bool.mean - qt(0.025, data_panel_a_summary1__70$false_bool.count - 1) * (data_panel_a_summary1__70$false_bool.sd / sqrt(data_panel_a_summary1__70$false_bool.count))
 
 # Create the figure
-library(ggplot2)
 figure2_A_70 <- ggplot(data_panel_a_summary1__70, aes(x = period, y = false_bool.mean, ymin = low, ymax = up)) +
   geom_point(shape = 3, size = 2) +
   geom_line()+
