@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.15)  30 OCT 2023 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.15)  30 OCT 2023 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -764,14 +764,7 @@ tex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count354
 \l__pdf_internal_box=\box117
-) (Danzetal2022_replication_report.aux
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-)
+) (Danzetal2022_replication_report.aux)
 \openout1 = `Danzetal2022_replication_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
@@ -888,98 +881,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 {C:/Users/dtruj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 [3
 
-] [4] [5] [6] (Danzetal2022_replication_report.bbl) [7]
-
-LaTeX Warning: File `2a_rep.png' not found on input line 226.
-
-
-! Package pdftex.def Error: File `2a_rep.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.226 		\includegraphics[scale=0.4]{2a_rep.png}
-                                               
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `2a_20.png' not found on input line 233.
-
-
-! Package pdftex.def Error: File `2a_20.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.233 		\includegraphics[scale=0.4]{2a_20.png}
-                                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `2a_30.png' not found on input line 240.
-
-
-! Package pdftex.def Error: File `2a_30.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.240 		\includegraphics[scale=0.4]{2a_30.png}
-                                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `2a_50.png' not found on input line 247.
-
-
-! Package pdftex.def Error: File `2a_50.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.247 		\includegraphics[scale=0.4]{2a_50.png}
-                                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `2a_70.png' not found on input line 254.
-
-
-! Package pdftex.def Error: File `2a_70.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.254 		\includegraphics[scale=0.4]{2a_70.png}
-                                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `2a_80.png' not found on input line 261.
-
-
-! Package pdftex.def Error: File `2a_80.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.261 		\includegraphics[scale=0.4]{2a_80.png}
-                                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[8]
+] [4] [5] [6] (Danzetal2022_replication_report.bbl) [7] [8]
 
 ! LaTeX Error: File `Tables/t1.tex' not found.
 
@@ -990,17 +892,17 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.274 			\input{Tables/t1}
+l.234 			\input{Tables/t1}
                           ^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 16220 strings out of 475385
- 265531 string characters out of 2776906
- 613625 words of memory out of 3000000
- 37230 multiletter control sequences out of 15000+600000
- 508124 words of font info for 115 fonts, out of 8000000 for 9000
+ 16008 strings out of 475385
+ 261809 string characters out of 2776906
+ 613202 words of memory out of 3000000
+ 37043 multiletter control sequences out of 15000+600000
+ 507276 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,8n,77p,1310b,455s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,8n,77p,1310b,453s stack positions out of 10000i,1000n,20000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
