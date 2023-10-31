@@ -8,16 +8,12 @@ library(readr)
 library(haven)
 
 
-
-# Set Working Directory
-setwd("data")  # Set base directory
-
 #-----------------------------------------------------------------------
 #### Generate core variables ----
 #-----------------------------------------------------------------------
 
 # Read data
-data <- read.csv("data-bsr-qsr.csv", header = TRUE)
+data <- read.csv("data/data-bsr-qsr.csv", header = TRUE)
 
 # Create indicator for false report
 #First round per prior 
@@ -81,7 +77,6 @@ Main_data.df<-left_join(data,data1,  by=c("subjectid"="subjectid") )
 #-----------------------------------------------------------------------
 #### Figure 2 Panel A ----
 #-----------------------------------------------------------------------
-library(ggplot2)
 
 # Select prior reports from BSR Information treatment
 data_panel_a <- data[Main_data.df$scoringrule == 1 & data$treatment == 1, ] ### 
