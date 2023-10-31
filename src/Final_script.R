@@ -92,9 +92,9 @@ data_panel_a_summary.df <- aggregate(false_bool ~ period, data = data_panel_a, F
   c(mean = mean(x), sd = sd(x), count = length(x))
 })
 
-write.csv(data_panel_a_summary.df, "../results/Panel1_sum.csv") ### The format was acting up
+write.csv(data_panel_a_summary.df, "results/Panel1_sum.csv") ### The format was acting up
 
-data_panel_a_summary1 <- read.csv("../results/Panel1_sum.csv", header = TRUE)
+data_panel_a_summary1 <- read.csv("results/Panel1_sum.csv", header = TRUE)
 
 
 data_panel_a_summary1$up <- data_panel_a_summary1$false_bool.mean + qt(0.025, data_panel_a_summary1$false_bool.count - 1) * (data_panel_a_summary1$false_bool.sd / sqrt(data_panel_a_summary1$false_bool.count))
@@ -135,9 +135,9 @@ data_panel_a_summary_20.df <- aggregate(false_bool ~ period, data = data_panel_a
   c(mean = mean(x), sd = sd(x), count = length(x))
 })
 
-write.csv(data_panel_a_summary_20.df, "../results/Panel1_sum_20.csv") ### The format was acting up
+write.csv(data_panel_a_summary_20.df, "results/Panel1_sum_20.csv") ### The format was acting up
 
-data_panel_a_summary1__20 <- read.csv("../results/Panel1_sum_20.csv", header = TRUE)
+data_panel_a_summary1__20 <- read.csv("results/Panel1_sum_20.csv", header = TRUE)
 
 View(data_panel_a_summary1__20)
 data_panel_a_summary1__20$up <- data_panel_a_summary1__20$false_bool.mean + qt(0.025, data_panel_a_summary1__20$false_bool.count - 1) * (data_panel_a_summary1__20$false_bool.sd / sqrt(data_panel_a_summary1__20$false_bool.count))
@@ -174,9 +174,9 @@ data_panel_a_summary_30.df <- aggregate(false_bool ~ period, data = data_panel_a
   c(mean = mean(x), sd = sd(x), count = length(x))
 })
 
-write.csv(data_panel_a_summary_30.df, "../results/Panel1_sum_30.csv") ### The format was acting up
+write.csv(data_panel_a_summary_30.df, "results/Panel1_sum_30.csv") ### The format was acting up
 
-data_panel_a_summary1__30 <- read.csv("../results/Panel1_sum_30.csv", header = TRUE)
+data_panel_a_summary1__30 <- read.csv("results/Panel1_sum_30.csv", header = TRUE)
 
 View(data_panel_a_summary1__30)
 data_panel_a_summary1__30$up <- data_panel_a_summary1__30$false_bool.mean + qt(0.025, data_panel_a_summary1__30$false_bool.count - 1) * (data_panel_a_summary1__30$false_bool.sd / sqrt(data_panel_a_summary1__30$false_bool.count))
@@ -215,9 +215,9 @@ data_panel_a_summary_50.df <- aggregate(false_bool ~ period, data = data_panel_a
   c(mean = mean(x), sd = sd(x), count = length(x))
 })
 
-write.csv(data_panel_a_summary_50.df, "../results/Panel1_sum_50.csv") ### The format was acting up
+write.csv(data_panel_a_summary_50.df, "results/Panel1_sum_50.csv") ### The format was acting up
 
-data_panel_a_summary1__50 <- read.csv("../results/Panel1_sum_50.csv", header = TRUE)
+data_panel_a_summary1__50 <- read.csv("results/Panel1_sum_50.csv", header = TRUE)
 
 View(data_panel_a_summary1__50)
 data_panel_a_summary1__50$up <- data_panel_a_summary1__50$false_bool.mean + qt(0.025, data_panel_a_summary1__50$false_bool.count - 1) * (data_panel_a_summary1__50$false_bool.sd / sqrt(data_panel_a_summary1__50$false_bool.count))
@@ -255,9 +255,9 @@ data_panel_a_summary_70.df <- aggregate(false_bool ~ period, data = data_panel_a
   c(mean = mean(x), sd = sd(x), count = length(x))
 })
 
-write.csv(data_panel_a_summary_70.df, "../results/Panel1_sum_70.csv") ### The format was acting up
+write.csv(data_panel_a_summary_70.df, "results/Panel1_sum_70.csv") ### The format was acting up
 
-data_panel_a_summary1__70 <- read.csv("../results/Panel1_sum_70.csv", header = TRUE)
+data_panel_a_summary1__70 <- read.csv("results/Panel1_sum_70.csv", header = TRUE)
 
 View(data_panel_a_summary1__70)
 data_panel_a_summary1__70$up <- data_panel_a_summary1__70$false_bool.mean + qt(0.025, data_panel_a_summary1__70$false_bool.count - 1) * (data_panel_a_summary1__70$false_bool.sd / sqrt(data_panel_a_summary1__70$false_bool.count))
@@ -294,9 +294,9 @@ data_panel_a_summary_80.df <- aggregate(false_bool ~ period, data = data_panel_a
   c(mean = mean(x), sd = sd(x), count = length(x))
 })
 
-write.csv(data_panel_a_summary_80.df, "../results/Panel1_sum_80.csv") ### The format was acting up
+write.csv(data_panel_a_summary_80.df, "results/Panel1_sum_80.csv") ### The format was acting up
 
-data_panel_a_summary1__80 <- read.csv("../results/Panel1_sum_80.csv", header = TRUE)
+data_panel_a_summary1__80 <- read.csv("results/Panel1_sum_80.csv", header = TRUE)
 
 View(data_panel_a_summary1__80)
 data_panel_a_summary1__80$up <- data_panel_a_summary1__80$false_bool.mean + qt(0.025, data_panel_a_summary1__80$false_bool.count - 1) * (data_panel_a_summary1__80$false_bool.sd / sqrt(data_panel_a_summary1__80$false_bool.count))

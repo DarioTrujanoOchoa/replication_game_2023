@@ -7,11 +7,6 @@ library(ggplot2)
 library(readr)
 library(haven)
 
-
-
-# Set Working Directory
-setwd("C:/Users/gagyeah/OneDrive - University of Arkansas/Uark/Summer 2023/Replication/Replication Package/data")  # Set base directory
-
 #-----------------------------------------------------------------------
 #### Generate core variables 
 #-----------------------------------------------------------------------
