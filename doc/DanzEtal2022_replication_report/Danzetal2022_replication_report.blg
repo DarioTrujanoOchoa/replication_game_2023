@@ -5,44 +5,46 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: kluwer.bst
 Reallocating 'name_of_file' (item size: 1) to 7 items.
 Database file #1: biblio.bib
-You've used 2 entries,
+Warning--I didn't find a database entry for "ravallion2001mystery"
+You've used 1 entry,
             2880 wiz_defined-function locations,
-            649 strings with 5041 characters,
-and the built_in function-call counts, 6702 in all, are:
-= -- 1067
-> -- 94
+            645 strings with 4987 characters,
+and the built_in function-call counts, 4812 in all, are:
+= -- 779
+> -- 70
 < -- 0
-+ -- 494
-- -- 28
-* -- 568
-:= -- 1389
-add.period$ -- 2
-call.type$ -- 2
-change.case$ -- 28
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 28
-empty$ -- 66
-format.name$ -- 33
-if$ -- 1192
++ -- 373
+- -- 21
+* -- 422
+:= -- 967
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 14
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 14
+empty$ -- 37
+format.name$ -- 24
+if$ -- 862
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 2
-newline$ -- 9
-num.names$ -- 21
-pop$ -- 3
+missing$ -- 1
+newline$ -- 6
+num.names$ -- 11
+pop$ -- 1
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 15
 quote$ -- 0
-skip$ -- 28
+skip$ -- 15
 stack$ -- 0
-substring$ -- 1494
-swap$ -- 4
-text.length$ -- 28
+substring$ -- 1111
+swap$ -- 2
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 4
 warning$ -- 0
-while$ -- 46
+while$ -- 23
 width$ -- 0
-write$ -- 28
+write$ -- 16
+(There was 1 warning)
