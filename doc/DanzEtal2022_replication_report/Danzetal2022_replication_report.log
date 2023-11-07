@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.15)  31 OCT 2023 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.15)  7 NOV 2023 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -858,91 +858,84 @@ Package caption Info: longtable package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 104
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107
 .
  (C:\Users\dtruj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 104
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107
 .
 
 (C:\Users\dtruj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for TS1+aer on input line 1
-04.
-LaTeX Font Info:    No file TS1aer.fd. on input line 104.
+07.
+LaTeX Font Info:    No file TS1aer.fd. on input line 107.
 
 
 LaTeX Font Warning: Font shape `TS1/aer/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textasteriskcentered' on input line 104.
+(Font)              for symbol `textasteriskcentered' on input line 107.
 
 LaTeX Font Info:    Trying to load font information for T1+aett on input line 1
-04.
+07.
 (C:\Users\dtruj\AppData\Local\Programs\MiKTeX\tex/latex/ae\t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 [1
 
-{C:/Users/dtruj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+{C:/Users/dtruj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2
 
-Package natbib Warning: Citation `ravallion2001mystery' on page 3 undefined on 
-input line 162.
-
-[3
-
-] [4] [5] [6] (Danzetal2022_replication_report.bbl) [7]
-<../../results/2a_rep.png, id=59, 726.46407pt x 514.17094pt>
+]
+[3] [4] (Danzetal2022_replication_report.bbl) [5]
+<../../results/2a_rep.png, id=49, 726.46407pt x 514.17094pt>
 File: ../../results/2a_rep.png Graphic file (type png)
 <use ../../results/2a_rep.png>
-Package pdftex.def Info: ../../results/2a_rep.png  used on input line 226.
+Package pdftex.def Info: ../../results/2a_rep.png  used on input line 227.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_20.png, id=60, 726.46407pt x 514.17094pt>
+<../../results/2a_20.png, id=50, 726.46407pt x 514.17094pt>
 File: ../../results/2a_20.png Graphic file (type png)
 <use ../../results/2a_20.png>
-Package pdftex.def Info: ../../results/2a_20.png  used on input line 233.
+Package pdftex.def Info: ../../results/2a_20.png  used on input line 234.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_30.png, id=61, 726.46407pt x 514.17094pt>
+<../../results/2a_30.png, id=51, 726.46407pt x 514.17094pt>
 File: ../../results/2a_30.png Graphic file (type png)
 <use ../../results/2a_30.png>
-Package pdftex.def Info: ../../results/2a_30.png  used on input line 240.
+Package pdftex.def Info: ../../results/2a_30.png  used on input line 241.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_50.png, id=62, 726.46407pt x 514.17094pt>
+<../../results/2a_50.png, id=52, 726.46407pt x 514.17094pt>
 File: ../../results/2a_50.png Graphic file (type png)
 <use ../../results/2a_50.png>
-Package pdftex.def Info: ../../results/2a_50.png  used on input line 247.
+Package pdftex.def Info: ../../results/2a_50.png  used on input line 248.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_70.png, id=63, 726.46407pt x 514.17094pt>
+<../../results/2a_70.png, id=53, 726.46407pt x 514.17094pt>
 File: ../../results/2a_70.png Graphic file (type png)
 <use ../../results/2a_70.png>
-Package pdftex.def Info: ../../results/2a_70.png  used on input line 254.
+Package pdftex.def Info: ../../results/2a_70.png  used on input line 255.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_80.png, id=64, 726.46407pt x 514.17094pt>
+<../../results/2a_80.png, id=54, 726.46407pt x 514.17094pt>
 File: ../../results/2a_80.png Graphic file (type png)
 <use ../../results/2a_80.png>
-Package pdftex.def Info: ../../results/2a_80.png  used on input line 261.
+Package pdftex.def Info: ../../results/2a_80.png  used on input line 262.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
- [8 <../../results/2a_rep.png>] [9 <../../results/2a_20.png> <../../results/2a_
-30.png>] [10 <../../results/2a_50.png> <../../results/2a_70.png>] (Tables/t1.te
-x)
-Overfull \hbox (24.20645pt too wide) in paragraph at lines 273--281
+ [6 <../../results/2a_rep.png>] [7 <../../results/2a_20.png> <../../results/2a_
+30.png>] [8 <../../results/2a_50.png> <../../results/2a_70.png>] (Tables/t1.tex
+)
+Overfull \hbox (36.5961pt too wide) in paragraph at lines 274--282
  [] 
  []
 
-
-Package natbib Warning: There were undefined citations.
-
-[11 <../../results/2a_80.png>] (Danzetal2022_replication_report.aux)
+[9 <../../results/2a_80.png>] (Danzetal2022_replication_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -951,30 +944,28 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16078 strings out of 475385
- 263441 string characters out of 2776906
- 613973 words of memory out of 3000000
- 37089 multiletter control sequences out of 15000+600000
- 508779 words of font info for 113 fonts, out of 8000000 for 9000
+ 16068 strings out of 475385
+ 263280 string characters out of 2776906
+ 610985 words of memory out of 3000000
+ 37079 multiletter control sequences out of 15000+600000
+ 506855 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,11n,77p,1310b,459s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,12n,77p,1310b,459s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\dtruj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 0700.pk> <C:\Users\dtruj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1440.pk><C:/Users/dtruj/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+0\tcrm1000.pk><C:/Users/dtruj/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmb10.pfb><C:/Users/dtruj/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmcsc10.pfb><C:/Users/dtruj/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/dtruj/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dtruj/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/dtruj/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/dtruj/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users
-/dtruj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-<C:/Users/dtruj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb>
-Output written on Danzetal2022_replication_report.pdf (11 pages, 210171 bytes).
-
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dtruj/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Use
+rs/dtruj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b>
+Output written on Danzetal2022_replication_report.pdf (9 pages, 195941 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 

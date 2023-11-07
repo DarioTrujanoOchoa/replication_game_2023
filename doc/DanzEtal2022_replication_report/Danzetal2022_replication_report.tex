@@ -96,10 +96,13 @@
 	
 	\date{November, 2023}
 	
-	\title{Title: Replication Report of "Belief Elicitation and Behavioral Incentive Compatibility" by  Danz et al. (2022)\thanks{Authors: 
+	\title{Replication Report of "Belief Elicitation and Behavioral Incentive Compatibility" by  Danz et al. (2022)}
+	\author{
+		George Agyeah\thanks{Authors: 
 			Brodeur: University of Ottawa and IZA. E-mail: \href{mailto:abrodeur@uottawa.ca}%
-			{abrodeur@uottawa.ca}. For each author: List your affiliation(s) and contact information. Indicate who is the corresponding author if multiple authors. For each author: Acknowledge any financial support or conflict of interest. Describe your relationship with the original author(s) if there is a conflict of interest. Examples of conflict of interest include, but are not limited to, being a colleague, collaborator, current or former student, former thesis supervisor or family member. See I4R’s conflict of interest policy here: \url{https://i4replication.org/conflict.html}.}}
-	\author{George Agyeah \and Dario Trujano-Ochoa}
+			{abrodeur@uottawa.ca}. For each author: List your affiliation(s) and contact information. Indicate who is the corresponding author if multiple authors. For each author: Acknowledge any financial support or conflict of interest. Describe your relationship with the original author(s) if there is a conflict of interest. Examples of conflict of interest include, but are not limited to, being a colleague, collaborator, current or former student, former thesis supervisor or family member. See I4R’s conflict of interest policy here: \url{https://i4replication.org/conflict.html}.} \and 
+		Dario Trujano-Ochoa\thanks{University of California Santa Barbara. E-mail: \href{dariotrujanoochoa@ucsb.edu}%
+			{dariotrujanoochoa@ucsb.edu}. There were no conflicts of intereste beetween this authors and the results and authors from the original paper. There is no relationship between the original authors of the paper and Dario Trujano-Ochoa.}}
 	
 	\maketitle
 	
@@ -129,8 +132,15 @@
 		
 		%Conceptual replicability: The ability to duplicate the results of a prior study using new data and different procedures as were used by the original investigator.
 		
-		\small{Example: Speedy \cite{analyst_2022} examine the effect of a policy implemented in the fictional country Labas. In their preferred analytical specification, the authors find that the policy (PROSCOL) increased educational attainment of the treated group by 33 percentage points and decreased fertility by 9.8\%. Their point estimates are statistically significant at the 5\% and 10\% levels, respectively. First, we reproduce the paper’s main findings and uncover two minor coding errors which have no effect on the studies’ main results. Second, we test the robustness of the results to (1) adding more years to the sample and (2) changing how standard errors are clustered. We find that adding more years to the sample decreases the size of the point estimate by one-third for education and by one-fourth for fertility. The point estimate for fertility becomes statistically insignificant at the 10\% level, while it remains significant at the 5\% level for education. Clustering at the region level makes the point estimates for education and fertility to be statistically insignificant at the 10% level. 
+		\small{
+			% summary of the results from the original paper
+			In the original paper, \cite{analyst_2022} . 
+			%Summary of our findings
+			%First, we reproduce the paper’s main findings and uncover two minor coding errors which have no effect on the studies’ main results. Second, we test the robustness of the results to (1) adding more years to the sample and (2) changing how standard errors are clustered. 
+			% extended findings
+			%We find that adding more years to the sample decreases the size of the point estimate by one-third for education and by one-fourth for fertility. The point estimate for fertility becomes statistically insignificant at the 10\% level, while it remains significant at the 5\% level for education. Clustering at the region level makes the point estimates for education and fertility to be statistically insignificant at the 10% level. 
 			
+			%
 			Example for a direct replication of an experimental study: We conduct a direct replication of the paper by using the same procedures (i.e., method and analysis) and new data. We confirm the sign, magnitude and statistical significance of the point estimates for outcome X.} \newline
 		
 		
@@ -159,16 +169,7 @@
 	\textbf{Example:} 
 	%(see above for instructions)%
 	
-	\cite{analyst_2022}, henceforth SSD, investigate the impact of a program called PROSCOL. The setting is the country of Labas. In 2000, its government introduced an antipoverty program in northwest Labas (\cite{ravallion2001mystery}). The program aims to provide cash transfers to poor families with school-age children. To be eligible to receive the transfer, households must have certain observable characteristics that suggest they are poor.
-	
-	SSD tested the effect of the policy (PROSCOL) on school enrollment and fertility for low-income families, using a difference-in-differences approach comparing the treated region (Labas) to untreated regions before/after the implementation of the policy. The main data set comes from the Labas Social Survey from 1998 to 2002. SSD’s describe their main results on p.7 as follows “we show that the policy (PROSCOL) increased school enrollment rates for the treated group by 30 percentage points and decreased the number of children born by 0.10 per family (mean of the dependent variable is 3.4). Our point estimates are statistically significant at the 5\% level.”\footnote{Report the statistical significance used by the original authors.}
-	
-	In the present paper, we investigate whether their analytical results are reproducible and replicable and further test their robustness to two specification checks: (1) adding more years to the sample and (2) changing how standard errors are clustered. In their original analysis, SSD rely on data from 1998 to 2002 and cluster their standard errors at the region/year level. In our re-analysis, we extend the time period to 1998 to 2004 and cluster the standard errors at the region level. We are grateful to the original authors for providing these additional years of data, which were (un)available at the time of their analysis.
-	
-	In terms of reproducibility, we would like to acknowledge that the original study was successfully reproduced by the data editor’s team at the American Economic Review. We also successfully reproduced SSD’s main tables (Tables 4 and 5) using their codes, although there were very small discrepancies in the magnitude of the main point estimates for Table 5 due to coding errors. We uncovered two minor coding errors; (1) coding the control variable Age and (2) the gender dummy was included as a continuous variable in one regression.
-	
-	We then turn to sensitivity analysis. As mentioned above, we test the robustness of the results to (1) adding more years to the sample and (2) changing how standard errors are clustered. We find that adding more years to the sample decreases the size of the main point estimate by one-third for educational attainment and by one-fourth for fertility. The point estimate for fertility becomes statistically insignificant at the 5\% level, while it remains significant at the 5\% level for education. Clustering at the region level makes the point estimates to be statistically insignificant at the 5\% level.
-	Last, we attempt to replicate the paper using the raw data and new codes. We would like to thank the original authors for making available the raw data; educational attainment, fertility, demographic data and PROSCOL data.
+	\cite{analyst_2022}, henceforth DVW, 
 	
 	
 	\section{Reproducibility}
@@ -268,13 +269,13 @@
 	
 	\begin{table}[H]
 		\centering
-		\caption{Priors by Treatment Categories} \label{tab:table1}
+		\caption{Number of pbservations in each treatment by prior} \label{tab:table1}
 		\begin{threeparttable}
 			\footnotesize 
 			\input{Tables/t1} 
 			\begin{tablenotes}
 				\scriptsize 
-				\item{Notes: We noticed that the priors of participants differed by number of observations.
+				\item{Notes: The priors of participants differed by number of observations.
 				}
 			\end{tablenotes}  
 		\end{threeparttable}                          
