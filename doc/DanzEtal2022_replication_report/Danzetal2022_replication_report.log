@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.15)  7 NOV 2023 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.15)  14 NOV 2023 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -780,6 +780,9 @@ LaTeX Warning: Label `fig:enter-label' multiply defined.
 
 LaTeX Warning: Label `fig:enter-label' multiply defined.
 
+
+LaTeX Warning: Label `tab:R1' multiply defined.
+
 )
 \openout1 = `Danzetal2022_replication_report.aux'.
 
@@ -898,44 +901,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
 ]
 [3] [4] (Danzetal2022_replication_report.bbl) [5]
-<../../results/2a_rep.png, id=49, 726.46407pt x 514.17094pt>
+<../../results/2a_rep.png, id=51, 726.46407pt x 514.17094pt>
 File: ../../results/2a_rep.png Graphic file (type png)
 <use ../../results/2a_rep.png>
-Package pdftex.def Info: ../../results/2a_rep.png  used on input line 227.
+Package pdftex.def Info: ../../results/2a_rep.png  used on input line 233.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_20.png, id=50, 726.46407pt x 514.17094pt>
+<../../results/2a_20.png, id=52, 726.46407pt x 514.17094pt>
 File: ../../results/2a_20.png Graphic file (type png)
 <use ../../results/2a_20.png>
-Package pdftex.def Info: ../../results/2a_20.png  used on input line 234.
+Package pdftex.def Info: ../../results/2a_20.png  used on input line 240.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_30.png, id=51, 726.46407pt x 514.17094pt>
+<../../results/2a_30.png, id=53, 726.46407pt x 514.17094pt>
 File: ../../results/2a_30.png Graphic file (type png)
 <use ../../results/2a_30.png>
-Package pdftex.def Info: ../../results/2a_30.png  used on input line 241.
+Package pdftex.def Info: ../../results/2a_30.png  used on input line 247.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_50.png, id=52, 726.46407pt x 514.17094pt>
+<../../results/2a_50.png, id=54, 726.46407pt x 514.17094pt>
 File: ../../results/2a_50.png Graphic file (type png)
 <use ../../results/2a_50.png>
-Package pdftex.def Info: ../../results/2a_50.png  used on input line 248.
+Package pdftex.def Info: ../../results/2a_50.png  used on input line 254.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_70.png, id=53, 726.46407pt x 514.17094pt>
+<../../results/2a_70.png, id=55, 726.46407pt x 514.17094pt>
 File: ../../results/2a_70.png Graphic file (type png)
 <use ../../results/2a_70.png>
-Package pdftex.def Info: ../../results/2a_70.png  used on input line 255.
+Package pdftex.def Info: ../../results/2a_70.png  used on input line 261.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
-<../../results/2a_80.png, id=54, 726.46407pt x 514.17094pt>
+<../../results/2a_80.png, id=56, 726.46407pt x 514.17094pt>
 File: ../../results/2a_80.png Graphic file (type png)
 <use ../../results/2a_80.png>
-Package pdftex.def Info: ../../results/2a_80.png  used on input line 262.
+Package pdftex.def Info: ../../results/2a_80.png  used on input line 268.
 (pdftex.def)             Requested size: 290.58047pt x 205.66473pt.
  [6 <../../results/2a_rep.png>] [7 <../../results/2a_20.png> <../../results/2a_
 30.png>] [8 <../../results/2a_50.png> <../../results/2a_70.png>] (Tables/t1.tex
 )
-Overfull \hbox (36.5961pt too wide) in paragraph at lines 274--282
+Overfull \hbox (36.5961pt too wide) in paragraph at lines 280--288
  [] 
  []
 
-[9 <../../results/2a_80.png>] (Danzetal2022_replication_report.aux)
+<../../results/fig2B_round_one.pdf, id=81, 264.99pt x 180.675pt>
+File: ../../results/fig2B_round_one.pdf Graphic file (type pdf)
+<use ../../results/fig2B_round_one.pdf>
+Package pdftex.def Info: ../../results/fig2B_round_one.pdf  used on input line 
+293.
+(pdftex.def)             Requested size: 264.98935pt x 180.67455pt.
+<../../results/fig2A_round_one.pdf, id=82, 264.99pt x 180.675pt>
+File: ../../results/fig2A_round_one.pdf Graphic file (type pdf)
+<use ../../results/fig2A_round_one.pdf>
+Package pdftex.def Info: ../../results/fig2A_round_one.pdf  used on input line 
+300.
+(pdftex.def)             Requested size: 264.98935pt x 180.67455pt.
+[9 <../../results/2a_80.png> <../../results/fig2B_round_one.pdf>] [10 <../../re
+sults/fig2A_round_one.pdf>] (Danzetal2022_replication_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -944,10 +960,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16068 strings out of 475385
- 263280 string characters out of 2776906
- 610985 words of memory out of 3000000
- 37079 multiletter control sequences out of 15000+600000
+ 16091 strings out of 475385
+ 263940 string characters out of 2776906
+ 611119 words of memory out of 3000000
+ 37095 multiletter control sequences out of 15000+600000
  506855 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,12n,77p,1310b,459s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -963,9 +979,10 @@ rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/dtruj/AppData
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Use
 rs/dtruj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b>
-Output written on Danzetal2022_replication_report.pdf (9 pages, 195941 bytes).
+Output written on Danzetal2022_replication_report.pdf (10 pages, 207086 bytes).
+
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
