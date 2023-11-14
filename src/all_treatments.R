@@ -115,7 +115,7 @@ bsr_treatmens_first_round %>%
   scale_x_continuous(breaks = 1:10 ) +
   theme_minimal_hgrid()
 
-ggsave("results/all_treatments_periods_onr_round.pdf")
+ggsave("results/all_treatments_periods_round_one.pdf")
 
 ## figure 2B ----
 bsr_treatmens_first_round %>% 
@@ -131,4 +131,4 @@ bsr_treatmens_first_round %>%
   ylab("Fraction of false reports") +
   theme_minimal_hgrid()
 
-ggsave("results/all_treatments_priors_one_round.pdf")
+ggsave("results/all_treatments_priors_round_one.pdf")
