@@ -14,10 +14,6 @@ font_add_google("Schoolbell", "bell")
 # import data
 source("src/import_data.R")
 
-# for the graph sizes
-g = 1.618034
-s = 5
-
 # calculate rates of false reports
 data.bsr.qsr <-
 data.bsr.qsr %>%

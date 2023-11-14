@@ -12,8 +12,16 @@ p_load(cowplot)
 # import data
 source("src/import_data.R")
 
-# calculate rates of false reports and Learning for the 50% prior ----
+# calculate rates of false reports
+data.bsr.qsr <-
+  data.bsr.qsr %>%
+  mutate(false_report = (belief1 != pur))
 
+# data for BSR (elicitation method) and information treatment
+bsr_info <-
+  data.bsr.qsr %>% 
+  filter(scoringrule == 1, 
+         treatment == 1)
 ## Assign the relative presentation order within each prior considered. ----
 
 data.bsr.qsr <-
@@ -43,7 +51,8 @@ data.bsr.qsr %>%
   scale_x_continuous(breaks = 1:10 ) +
   theme_minimal_hgrid()
 
-ggsave("results/all_treatments_periods.pdf")
+ggsave("results/all_treatments_periods.pdf",
+       width=s*g, height=s, pointsize = s)
 
 ## figure 2B ----
 data.bsr.qsr %>% 
@@ -56,39 +65,13 @@ data.bsr.qsr %>%
                fill = factor(pur) ),
            position = "dodge") +
   ylim(0,1) +
-  xlab("Known prior of Red Urn") +
+  xlab("Treatment") +
   ylab("Fraction of false reports") +
-  theme_minimal_hgrid()
+  theme_minimal_hgrid() +
+  scale_fill_discrete(name = "Prior") 
 
-ggsave("results/all_treatments_priors.pdf")
-
-# The number of rounds per prior is different for each prior.
-# 50% has a larger number of repetitions.
-bsr_info %>% 
-  group_by(subjectid, pur) %>% 
-  summarise(n_rounds = n()) %>% 
-  group_by(pur) %>% 
-  summarise(N_rounds = mean(n_rounds), sd(n_rounds))
-
-# Proportion of false report for the prior 50% across order of presentation
-# There was no trend, it seems that the false report rate is constant.
-bsr_info %>% 
-  filter(pur == 50) %>% 
-  group_by(order_prior) %>% 
-  summarise(prop_false_report = mean(false_report)) %>% 
-  ggplot() + 
-  geom_line(aes(x = order_prior,y = prop_false_report)) +
-  ylim(0,1)
-
-# Modify data to filter ----
-# Posterior Belief elicited.
-# The posterior belief should be around 50, however, there is clear trend downwards
-bsr_info %>% 
-  filter(pur == 50) %>% 
-  group_by(order_prior) %>% 
-  summarise(prior_stated = mean(belief1)) %>% 
-  ggplot() + 
-  geom_line(aes(x = order_prior,y = prior_stated))
+ggsave("results/all_treatments_priors.pdf",
+       width=s*g, height=s, pointsize = s)
 
 # Filter for the first round per prior ----
 
@@ -115,7 +98,8 @@ bsr_treatmens_first_round %>%
   scale_x_continuous(breaks = 1:10 ) +
   theme_minimal_hgrid()
 
-ggsave("results/all_treatments_periods_round_one.pdf")
+ggsave("results/all_treatments_periods_round_one.pdf",
+       width=s*g, height=s, pointsize = s)
 
 ## figure 2B ----
 bsr_treatmens_first_round %>% 
@@ -127,8 +111,12 @@ bsr_treatmens_first_round %>%
                fill = factor(pur) ),
            position = "dodge") +
   ylim(0,1) +
-  xlab("Known prior of Red Urn") +
+  xlab("Treatment") +
   ylab("Fraction of false reports") +
-  theme_minimal_hgrid()
+  theme_minimal_hgrid() +
+  scale_fill_discrete(name = "Prior") 
 
-ggsave("results/all_treatments_priors_round_one.pdf")
+ggsave("results/all_treatments_priors_round_one.pdf",
+       width=s*g, height=s, pointsize = s)
+
+

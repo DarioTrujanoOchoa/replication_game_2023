@@ -16,3 +16,7 @@ data.incentives.only <- read.csv("data/data-incentives-only.csv")
 
 ## 4. Holt and Smith 2016
 read_dta("data/data-HoltSmith2016.dta")
+
+# for the graph sizes ----
+g = 1.618034
+s = 5
