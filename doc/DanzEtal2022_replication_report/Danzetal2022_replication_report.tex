@@ -174,7 +174,22 @@
 	
 	\section{Reproducibility}
 	
-	During our investigation, we noticed that the frequency of the priors is not balanced, as shown in table 1 below. Specifically, each individual is randomly assigned priors with a 0.5 probability four times as often as prior 0.2 and prior of 0.8 independently. Similarly, priors of 0.3 and 0.7 are assigned twice as many times as priors of 0.2 and 0.8 independently. We are curious whether the lower false report rates in figure 2b specific to prior belief of 0.5 are a result of learning given the repetition of priors. It is possible for participants to get a better understanding of the optimal strategy as they proceed in the experiment. Hence, priors with lower frequencies should exhibit a different distribution compared to priors that are shown multiple times.
+	During our investigation, we noticed that the frequency of the priors is not balanced, as shown in table \ref{priors} below. Specifically, each individual is randomly assigned priors with a 0.5 probability four times as often as prior 0.2 and prior of 0.8 independently. Similarly, priors of 0.3 and 0.7 are assigned twice as many times as priors of 0.2 and 0.8 independently. We are curious whether the lower false report rates in figure 2b specific to prior belief of 0.5 are a result of learning given the repetition of priors. It is possible for participants to get a better understanding of the optimal strategy as they proceed in the experiment. Hence, priors with lower frequencies should exhibit a different distribution compared to priors that are shown multiple times.
+	
+	\begin{table}[H]
+		\centering
+		\caption{Number of pbservations in each treatment by prior} \label{tab:table1}
+		\begin{threeparttable}
+			\footnotesize 
+			\input{Tables/t1} 
+			\begin{tablenotes}
+				\scriptsize 
+				\item{Notes: The priors of participants differed by number of observations.
+				}
+			\end{tablenotes}  
+		\end{threeparttable}                          
+	\end{table} \label{priors}
+	
 	
 	\hspace *{0mm} Specifically, if there is learning involved, the rate of false reports for priors with single frequencies will be random across periods since a participant is assigned a prior randomly. On the contrary, the priors with multiple frequencies will see a gradual decrease in the false report rates as the games proceed. If an individual learns each time he/she is presented with the same scenario, then as the individual continues to get more exposure to prior 0.5 relative to the other priors, he/she will get better at giving answers regarding that prior, leading to a similar distribution in figure 2b in the paper.
 	
@@ -272,21 +287,6 @@
 	
 	
 	\newpage
-	
-	\begin{table}[H]
-		\centering
-		\caption{Number of pbservations in each treatment by prior} \label{tab:table1}
-		\begin{threeparttable}
-			\footnotesize 
-			\input{Tables/t1} 
-			\begin{tablenotes}
-				\scriptsize 
-				\item{Notes: The priors of participants differed by number of observations.
-				}
-			\end{tablenotes}  
-		\end{threeparttable}                          
-	\end{table}
-	
 	
 	\begin{figure}
 		\centering
