@@ -1,0 +1,39 @@
+\begin{table}[htbp]
+    \begin{tabular}{c c c c}
+    \toprule
+    \textbf{Variables} & \textbf{(1)} & \textbf{(2)} & \textbf{(3)}         \\ 
+\midrule
+Diverse$-$Gender            &     0.42    &    0.35                               &  -0.25  \\
+                            &     (3.39)  &    (3.32)                             &  (3.68) \\
+
+Notmale                  &      -8.55\sym{**} &    -8.86\sym{**}             &  -6.87\sym{*}  \\
+                            &      (3.69)         &    (3.67)                     &  (3.77) \\
+Diverse*Notmale         &      -13.20\sym{***}   &  -13.93\sym{***}            &  -12.00\sym{**}\\
+                            &      (4.90)         &    (4.90)                     &  (5.10) \\
+
+
+Positive Chat                        &                     &                       &  7.19\sym{*}  \\
+                                 &                     &                           &  (4.08)  \\
+Negative  Chat                       &                     &                       &  -0.82  \\
+                                 &                     &                           &  (2.05)  \\
+Engagement Chat                      &                     &                       &  -3.48  \\
+                                 &                     &                           &  (2.69)  \\
+\midrule
+Other Controls                   &    No               &    Yes                    &    Yes        \\
+Status Controls                    &    No               &    No                   &    Yes        \\
+Chat                             &    No               &    No                     &    Yes        \\
+\midrule
+Number of Participants           &    333               &    333                   &    324        \\
+\midrule
+Observations                     &       1665          &       1665                &  1620    \\
+\bottomrule
+\end{tabular}
+\begin{footnotesize}
+\newline
+*P$<$0.1, **P$<$0.05, ***P$<$0.01
+\newline
+Note: Robust standard errors clustered at the group level. Marginal effects of Tobit Model reported.
+\newline
+The dependent variable is the hours toward the group activity in the minimum effort activity in Part I. 
+\end{footnotesize}
+\end{table}

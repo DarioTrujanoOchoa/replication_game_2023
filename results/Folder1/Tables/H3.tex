@@ -1,0 +1,27 @@
+{\tiny
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\toprule
+          & \multicolumn{3}{c}{Cooperation}   &\multicolumn{3}{c}{Coordination}     \\
+\midrule
+Newcomer(Before=1)  & -26.61\sym{***}  &    -25.12\sym{***}  &  -22.46\sym{***}   &     -17.91\sym{***}    &    -17.33\sym{***}  &  -16.94\sym{***}   \\
+&     (4.56)             &     (4.87)  &  (5.44)   &     (2.43)             &     (2.38)          &  (2.79)       \\
+\addlinespace
+Newcomer(After=1)  &     -0.64  &     0.80   &  3.27   &     -8.79\sym{***}     &     -8.18\sym{***}   &  -7.73  \\
+                 & (5.69)   &   (5.80)  &  (6.22)    &     (2.88)             &     (2.86)           &  (3.26) \\
+\addlinespace
+Incumbent(After=1)   & 5.90\sym{**}  &  5.87\sym{**}  &  5.74\sym{**}   &     -4.26\sym{**}      &     -4.27\sym{**}  &  -4.30\sym{**}    \\
+         &     (2.91) &     (2.89)   &  (2.88)  &     (1.70)             &     (1.70)         &  (1.70)    \\
+
+\midrule
+Other Controls   &    No &    Yes &    Yes    &    No  &    Yes &    Yes             \\
+Status Controls &    No  &    No    &    Yes    &    No  &    No    &    Yes           \\
+Chat          &    No    &    No   &    No  &    No    &    No      &    No             \\
+\midrule
+Number of Participants &    444 &    444  &    444  &    444 &    444  &    444     \\
+\midrule
+Observations          &  4440  & 4440  &  4440  &  4440  & 4440  &  4440            \\
+\bottomrule
+*p$<$0.1, **p$<$0.05, ***p$<$0.01
+\end{tabular}
+}

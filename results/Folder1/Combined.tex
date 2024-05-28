@@ -1,0 +1,116 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry} % Set margins to 1 inch on all sides
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{lscape}
+\usepackage[nottoc]{tocbibind}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage[mathletters]{ucs}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage[natbibapa]{apacite}  % to enable '\citet' and '\citep' macros
+\usepackage{times}
+\usepackage{afterpage,geometry}
+\usepackage{lipsum}
+\bibliographystyle{aer}
+\pagestyle{plain} 
+\usepackage{caption}
+\usepackage{xpatch}
+\usepackage{sectsty}
+\xpretocmd{\part}{\setcounter{section}{0}}{}{}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+% \rfoot{\thepage} % Page number at the right bottom corner
+\renewcommand{\headrulewidth}{0pt} % Remove header rule
+\renewcommand{\footrulewidth}{0pt} % Remove footer rule
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{chngcntr} % Added package for counter resetting
+
+\counterwithin{figure}{part} % Reset figure counter at each part
+\counterwithin{table}{part} % Reset table counter at each part
+
+
+\partfont{\fontsize{12}{15}\selectfont} % Set section heading font size
+\sectionfont{\fontsize{12}{15}\selectfont} % Set section heading font size
+\subsectionfont{\fontsize{12}{15}\selectfont} % Set subsection heading font size
+\subsubsectionfont{\fontsize{12}{15}\selectfont} % Set subsubsection heading font size
+
+
+% \usepackage{titletoc}
+% Load the tocloft package for customization of the table of contents
+\usepackage{tocloft}
+
+% Customize the ToC part heading font size to 12pt
+% \renewcommand{\cftpartfont}{\fontsize{12}{14.4}\selectfont}
+\renewcommand{\cftpartfont}{\bfseries\fontsize{12}{15}\selectfont}
+
+
+% Suppress the page numbers for part headings in the ToC
+\renewcommand{\cftpartpagefont}{}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftsecdotsep}}
+
+% Remove the space allocated for page numbers for part headings
+\cftsetindents{part}{0em}{0em}
+
+% Customize the table of contents title font size to 12pt
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\cfttoctitlefont}{\bfseries\fontsize{12}{14.4}\selectfont}
+
+\doublespacing
+
+\begin{document}
+
+\thispagestyle{empty} % no page number for title page
+\input{Disseration_title_final}
+\clearpage
+
+\thispagestyle{empty} % no page number for title page
+\input{Front_matter}
+\clearpage
+
+
+
+
+% \thispagestyle{empty}
+% \tableofcontents
+% \clearpage
+
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\tableofcontents
+\clearpage
+
+\thispagestyle{empty} 
+\input{Introduction}
+\clearpage
+
+\part{Racial and Gender Diversity, Newcomers and Team Performance in a Dynamic Setting}
+\input{Chapter 1}
+\clearpage
+
+
+\part{Group bias, anticipation and performance}
+\input{Chapter 2}
+\clearpage
+
+\part{Do investors show team composition preferences in funding Startup teams? An analysis of Venture Funding}
+\input{Chapter 3}
+\clearpage
+
+\input{Conclusion}
+\clearpage
+
+\end{document}
+
