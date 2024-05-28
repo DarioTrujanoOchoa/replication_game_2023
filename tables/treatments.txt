@@ -1,0 +1,27 @@
+
+
+\begin{table}[H]
+    \centering
+    \caption{Treatment Descriptions, Sample Sizes, and Main Findings} \label{tab:table1}
+    \begin{threeparttable}
+        \footnotesize 
+        {
+	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	\begin{tabular}{|p{2cm}|p{5cm}|p{1cm}|p{5cm}|}
+\hline
+\textbf{Treatment} & \textbf{Description} & \textbf{Sample Size} & \textbf{Main Finding} \\ \hline
+Information & Provides clear information on the quantitative incentives associated with reporting beliefs. & 60 & Increased false reports and systematic bias towards the center due to detailed incentive information. \\ \hline
+No Information & Omits all quantitative information about incentives, focusing on ensuring that truthful reporting is encouraged through non-quantitative means. & 60 & Lower rate of false reports and no systematic bias, showing better compliance with truthful reporting. \\ \hline
+Reduction of Compound Lottery (RCL) & Introduces a calculator tool to help participants determine the total chance of winning for any reported belief, aiming to aid in understanding the mechanism’s incentive compatibility. & 59 & Reduced the rate of false reports but did not fully eliminate the pull-to-center effect found in the Information treatment. \\ \hline
+Description & Similar to No Information but includes a nonquantitative description of how reported beliefs map to earnings. & 60$^*$ & Data on main findings not explicitly provided, but likely similar to No Information. \\ \hline
+Feedback & Incentive information is gradually revealed through end-of-period feedback, showing participants the effects of their reported beliefs on their chances of winning, effectively demonstrating the incentive mechanism incrementally. & 60 & Initial reports similar to No Information treatment, but false reports increased over time as incentive information was revealed. \\ \hline
+\end{tabular}
+}
+        \begin{tablenotes}
+            \scriptsize 
+            \item{$^*$ Data on main findings not explicitly provided, but confirmed with the data in the replication package.
+            }
+        \end{tablenotes}  
+    \end{threeparttable}  
+\label{tab:treatments}
+\end{table} 

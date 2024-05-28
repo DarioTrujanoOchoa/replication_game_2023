@@ -1,0 +1,567 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{tmargin=1in,bmargin=1in,lmargin=1.2in,rmargin=1.2in}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ae,aecompl}
+\usepackage[multiple]{footmisc}
+\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage{bookmark}
+\hypersetup{colorlinks=true,citecolor=blue}
+\usepackage{amsthm}
+%\usepackage{MJOARTI}
+\usepackage{setspace}
+%\onehalfspacing
+%\doublespacing
+%\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{bbold}
+\usepackage{lscape}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{hyperref}
+%\usepackage{floatrow}
+\usepackage{lscape}
+\usepackage{ifthen}
+\usepackage{url}
+\usepackage{blkarray}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{supertabular}
+\usepackage{fancyhdr}
+\usepackage{epstopdf}
+\usepackage{dsfont}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{eurosym}
+\usepackage{arydshln}
+\usepackage{natbib}
+\usepackage{threeparttable} % for notes below a table
+\usepackage{comment}
+\usepackage{subcaption}
+
+\newcommand\citeapos[1]{\citeauthor{#1}'s (\citeyear{#1})}
+\newtheorem{theorem}{Theorem}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{assumption}{Assumption}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\newtheorem{class}{Class}
+\usepackage{array}
+\newcolumntype{k}{>{\centering\arraybackslash}p{2cm}}
+\usepackage{longtable}
+\usepackage{ltcaption}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{textcomp}
+
+
+%\setlength{\absleftindent}{-0.25in} % For Restart
+%\setlength{\absrightindent}{-0.25in} % For Restart
+
+%\renewcommand\thesection{\Roman{section}.}
+%\renewcommand\thesubsection{\Alph{subsection}.}
+
+\begin{document}
+
+\date{April, 2024}
+
+\title{Replication Report of ``Belief Elicitation and Behavioral Incentive Compatibility'' by  Danz, Vesterlund, and Wilson (2022)}
+\author{
+    George Agyeah
+\and 
+        Zeeshan Samad
+\and 
+        Dario Trujano-Ochoa\thanks{Agyeah: University of Arkansas. Email: \href{gagyeah@uark.edu}{gagyeah@uark.edu}. Samad: Utah State University. Email: \href{zeeshan.samad@gmail.com}{zeeshan.samad@gmail.com}. Trujano-Ochoa: University of California Santa Barbara. E-mail: \href{dariotrujanoochoa@ucsb.edu} {dariotrujanoochoa@ucsb.edu}. There were no conflicts of interest nor any relationship between any of these authors and the authors of the original paper.}
+        }
+
+
+\maketitle
+
+\onehalfspacing
+\begin{abstract}
+
+This study replicates and extends the analysis of belief elicitation methods conducted by \cite{analyst_2022}. The original paper scrutinizes the binarized scoring rule (BSR) method and its effectiveness in incentivizing truthful reporting. Using data from the original controlled laboratory experiments conducted at the Pittsburgh Experimental Economics Laboratory (PEEL), this replication investigates the impact of varying levels of information about incentives on belief reporting accuracy. The findings of the replication confirm systematic biases in belief reporting, particularly a center-bias effect, challenging the behavioral incentive compatibility of the BSR method. Robustness checks further confirm the generalizability of these results across different settings and belief elicitation tasks. These findings underscore the need for improved methodologies that ensure both theoretical and behavioral incentive compatibility in belief elicitation.
+    
+    %Instructions
+    %Summarize in few sentences the original study, focusing on the main results in the original abstract in terms of word claim  which you attempt to reproduce or replicate. 
+    
+    %By main results, please follow the word claim from the Social Science Replication Platform: “Claims can have different structures, here we propose two high-level categories based on the most common structures:
+    
+    %Causal claim: a claim is causal if it can be summarize using causal language. This language can be characterize by the following structure: “The paper estimates the effect of a variable X on outcome Y for population P, using method M.” For example: “This paper investigates the impact of bicycle provision (X) on secondary school enrollment (Y) among young women in Bihar/India (P), using a Difference in Difference approach (M).”
+    
+    %Descriptive/predictive claim: a claim is descriptive or predictive if it can be summarize using descriptive or predictive language. language can be characterize by the following structure: “The paper estimates the value of a variable Y (estimated or predicted) for population P under dimensions X (optional) using method M.” For example, “Drawing on a unique Swiss data set (P) and exploiting systematic anomalies in countries’ portfolio investment positions (M), I find that around 8% of the global financial wealth of households is held in tax havens (Y).”
+    
+    %Provide information, if relevant, on the magnitude and statistical significance of the main results. Then report all your reproduction and replication results. 
+    
+    %In the event that there are too many robustness tests per claim to report them individually in the Abstract, then report a summary measure such as the fraction of tests that replicates (i.e., statistically significant in the same direction as the original result) for each claim and the average relative size of the tests for each claim (or the average of these measures across the clams if there are also too many claims being reproduced or replicated to report them individually in the Abstract).
+    
+    %See below definitions: 
+    
+    %Computational reproducibility: The ability to duplicate the results of a prior study using the same data and procedures as were used by the original investigator. Reproducibility is done using the same computer code, but can be achieved using a different software package.
+    
+    %Robustness replicability: The ability to duplicate the results of a prior study using the same data but different procedures as were used by the original investigator. Robustness replicability can be done using the raw, intermediate or final data sets used by the original authors.
+    
+    %Direct replicability: The ability to duplicate the results of a prior study using new data but the same procedures as were used by the original investigator.
+    
+    %Conceptual replicability: The ability to duplicate the results of a prior study using new data and different procedures as were used by the original investigator.
+    
+    \small{
+        % summary of the results from the original paper
+        % In the original paper, \cite{analyst_2022} . 
+        %Summary of our findings
+        %First, we reproduce the paper’s main findings and uncover two minor coding errors which have no effect on the studies’ main results. Second, we test the robustness of the results to (1) adding more years to the sample and (2) changing how standard errors are clustered. 
+        % extended findings
+        %We find that adding more years to the sample decreases the size of the point estimate by one-third for education and by one-fourth for fertility. The point estimate for fertility becomes statistically insignificant at the 10\% level, while it remains significant at the 5\% level for education. Clustering at the region level makes the point estimates for education and fertility to be statistically insignificant at the 10% level. 
+        
+        %
+        % Example for a direct replication of an experimental study: We conduct a direct replication of the paper by using the same procedures (i.e., method and analysis) and new data. We confirm the sign, magnitude and statistical significance of the point estimates for outcome X.} \newline
+    }
+    
+    \textsc{Keywords}:  Replication, Data Analysis, Belief Elicitation, Incentive Effects.\newline
+    
+    \textsc{JEL codes}: C91, D83, D91.
+\end{abstract}
+
+\clearpage
+\doublespacing
+
+\section{Introduction}
+
+
+%Instructions
+
+%Briefly describe the main data sources, method, policy or treatment, time period and population for which the estimates apply. Then describe the main scientific claims (descriptive or causal) and robustness checks if those that are relevant for your re-analysis or replication. Quote the original part of the study that has the main scientific claim(s) including page number(s). As suggested in the Guide for Accelerating Computational Reproducibility in the Social Sciences (https://bitss.github.io/ACRE/), structure your summary of the main findings and methodology as follows: "The paper tested the effect of X on Y for population P, using method M. The main results show an effect of magnitude E (specify units and standard errors)" or "The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of magnitude E (specify units and standard errors)". This template assumes that the paper’s scientific claims are focused on estimating a causal relationship. In the event that the original study is estimating/predicting a descriptive statistic of a population, or something else, then describe and quote the results accordingly using precise claims from the original study.
+
+%How to select claims to reproduce/replicate? There are three possibilities; (1) select claims for all "hypotheses tests" in the original study, (2) select claims mentioned in the abstract or (3) select claims for what is considered the main result in the paper as stated by the original author(s). For the last option, provide a quote from the original study confirming that the claim chosen is considered the main result by the original author(s).       	
+
+%Next, summarize your reproduction and/or replication. Start by stating how you have obtained the data and codes and if the original author(s) answered your request(s) a/nd questions. Indicate the repository where your programs and data are located. Then proceed with a description of your conceptual reproducibility by describing if you have found coding error(s) and how they affect the main conclusions.
+
+%For replication, we adopt the definitions here. For robustness replicability, clearly state your robustness checks and how they affect the main point estimates. For direct and conceptual replications, clearly describe the new data. For conceptual replications, also describe the new procedures or they differ from the original study. Different procedures implies a different experimental design and/or analysis for experiments and different methods and/or analysis for observational data.
+
+%For all three replication types, be precise and summarize your results as follows: “Implementing this robustness increases/decreases the size of the main point estimate for outcome Y by X and the estimate is not anymore statistically significant at the X% level ” or "Implementing this robustness check has no effect on the magnitude or the statistical significance of the main point estimate." Also report the coefficient (or other effect size), the standard error of the coefficient/effect size, the test statistic including df if relevant, and the p-value for all tests.
+
+Accurately eliciting subjective beliefs is crucial for understanding decision-making behavior in economic contexts. The paper ``Belief Elicitation and Behavioral Incentive Compatibility'' by \cite{analyst_2022}, henceforth DVW, investigates the challenges and systematic biases in eliciting true subjective beliefs in economic experiments. DVW emphasizes the importance of not only ensuring theoretical incentive compatibility but also de facto behavioral incentive compatibility in belief elicitation methods. 
+
+DVW focus on the methodology and effectiveness of belief elicitation, specifically analyzing the binarized scoring rule (BSR), originally developed by \citet{hossain2013binarized}, in eliciting true beliefs from participants in economics experiments. The study questions the behavioral incentive compatibility of the BSR, a method theoretically designed to incentivize truthful reporting across a broad set of preferences.
+
+\subsection{Main Data Sources and Method}
+The primary data for this research were collected through a series of controlled laboratory experiments conducted at the Pittsburgh Experimental Economics Laboratory (PEEL). These experiments were designed to systematically vary the information about incentives provided to participants and observe the resulting impact on their reported beliefs. The study uses a within-subjects design to test the effects of incentive information on belief reporting accuracy.
+
+DVW shared a  \href{https://www.openicpsr.org/openicpsr/project/157161/version/V1/view}{replication package} with the description of the data and the original scripts. In this replication report, we use the data provided by them but redo the main analysis and check for further alternative hypothesis for the results using R \citep{RCoreTeam,tidyverse} and Stata. 
+
+\subsection{Policy or Treatment} 
+The key treatment in this study involves varying the information participants received about the BSR incentives. Table \ref{tab:treatments} provides a brief description of the treatments, the sample size and the main results of the study. In some treatments, participants were given detailed quantitative information about how their reports would affect their earnings. Other treatments provided minimal or no information about these incentives. This approach allows the authors to assess how information about incentives influences the accuracy and bias in belief reports.
+
+
+
+The effect of the treatments on the rate of false probabilistic reports was the main variable of analysis. The experiment was presented as a Bayesian updating task but the analysis concentrated on the priors revealed to the participants. The revelation of the priors to participants should prevent differences in learning and a clear definition of what the true probability reported should be. 
+
+\subsection{Time Period and Population}
+DVW do not specify when the experiment sessions were conducted but the subject population comprised undergraduate students recruited from the University of Pittsburgh, representing a typical population for experimental economic studies.
+
+\subsection{Main Scientific Claims}
+The paper's main scientific claim is that providing detailed information about the BSR incentives leads to systematic center-biased distortions in belief reporting, violating the conditions for behavioral incentive compatibility. This claim is substantiated by demonstrating that detailed incentive information prompts deviations from truthful reporting, and most participants do not choose the theoretically incentive-compatible options when given a choice.
+
+\textbf{Quote from the study:} ``The main finding is that information on the offered incentives increases false reports and causes systematic bias toward the center. Later, we directly assess the BSR incentives and find that most participants, when given a choice, fail to select the outcome assumed to be uniquely maximizing under the mechanism'' (Danz et al., 2022, pp. 2853).
+
+\subsection{Robustness Checks}
+The study conducts several robustness checks, including varying the degree of information about incentives provided to participants, using different methods to assist participants in understanding the incentives, and replicating a well-known experiment to assess the impact of belief elicitation biases on inference. These robustness checks support the main findings and demonstrate the generalizability of the results across different settings and elicitation tasks.
+
+\subsection{Summary of Main Findings and Methodology}
+The paper tests the effect of providing incentive information on the accuracy and biasedness of reported beliefs, in a lab experiment with a population of undergraduate students. The main results show that providing detailed incentive information leads to a systematic center-bias in belief reporting, which violates the conditions for behavioral incentive compatibility. This finding raises important considerations for the design and interpretation of belief elicitation in economic experiments and suggests the need for methods that are both theoretically and behaviorally incentive-compatible.
+
+
+\section{Reproducibility}
+During our investigation, we noticed that the frequency of the priors is not balanced, as shown in table \ref{tab:priors} below. Specifically, each individual is assigned a prior of 0.5 four times more often than the priors 0.2 or 0.8. Similarly, priors of 0.3 and 0.7 are assigned twice as many times as priors of 0.2 and 0.8. We were curious whether the lower false report rates for the 0.5 prior could be due to learning given the high repetition of this particular prior. If the result is driven by learning, participants would have gotten a better understanding of the optimal strategy as they proceeded in the experiment. Hence, priors with lower frequencies should exhibit a different distribution compared to priors that are shown multiple times.
+
+
+Specifically, if there were learning involved, the rate of false reports for priors with single frequencies would be random across periods since a participant is assigned a prior randomly. By contrast, priors that occur more frequently would have seen a gradual decrease in false report rates as the experiment proceeded. If an individual learns each time they were presented with the same scenario, then due to getting more exposure to the prior 0.5 relative to other priors, they would get better at giving answers regarding that prior, leading to center-bias in belief reporting reported in figure 2 of DVW (Danz et al., 2022, pp. 2859).
+
+In order to further understand the effect of learning or the lack of it, we replicate figure 2A (Danz et al., 2022, pp. 2859). Our hypothesis in this investigation is that considering some priors have a higher frequency than others, there should be some heterogeneity in the distribution of each prior over periods if learning occurred among participants. For example, consider a scenario where a participant encounters 0.5 four times over 10 periods. If learning can help reduce the false report rates, then the error rate for 0.5 would have an inverse relationship with periods. Likewise, if there is no learning, then there should not be a visible trend as the game proceeds. 
+
+\section{Replication}
+
+%Instructions
+
+%Clearly state/describe which type of replication you are conducting. See definitions at the beginning of this document. For robustness replicability, present your robustness checks and how they impact the main point estimates one by one so that it is clear how each modification to the specification/analysis impacts the main conclusions. Then you may combine them. Also, clearly state why you conduct each specific robustness check and/or modify the setting/model.
+
+%Do not confuse general critiques of the original research with replication or robustness checks (\cite{brown2018tests}). For instance, any critique of the design or methodology (e.g., qualitatively discussing the validity of an exclusion restriction for an instrumental variable) should be included in a separate section and clearly labeled as general critiques rather than a replication exercise.
+
+We now turn to our replication. We test the robustness of the results by using different procedures, and a computational reproducibility of the same figures in R (whereas DVW used Stata). For the robustness replication, we duplicate the results using different procedures. In particular, we look for a trend in the false report rates separately for each prior. Additionally, we relax DVW's criterion for considering a reported belief to be false. While DVW consider a report to be false if it is different from the actual prior, we consider it to be false only if it is more than $x\in \{2,5,10\}$ percentage points away from the actual prior. 
+
+The decision to conduct the robustness replication was taken even before reading the paper, while the decision to check for computational reproducibility was taken after reading the paper and observing the codes/programs.
+
+\subsection{Learning Effects}
+Figure 2A of DVW shows the fraction of false reports by each period. As a computational reproducibility exercise, we reproduce figure 2A using the R programming language. This reproduction is in figure \ref{fig:fig2a_rep}. The replication in a different programming language corresponds to the initial finding in the paper.
+
+To check for learning effects, we reproduce figure 2A of DVW separately for each prior. Figure \ref{tab:R2} shows the fraction of false reports conditional on the prior being 0.2. Besides the lack of an obvious trend, the intervals for the prior of 0.2 are wide due to the low number of counts relative to other priors. The nature of the confidence intervals is similar to the priors of 0.8 (figure \ref{tab:R6}) which, like 0.2, was shown only once to each participant.
+
+Figures \ref{tab:R3} and \ref{tab:R5} show the fraction of false reports in each period for the priors 0.3 and 0.7, respectively.  Both of these priors are shown twice to each participant. Due to this, the error bars are smaller here relative to the priors 0.2 and 0.8 (figures \ref{tab:R2} and \ref{tab:R6}) discussed above. Moreover, there is no trend in the false report rates across periods. In fact, errors increase beyond period 5 for prior 0.3 (figure \ref{tab:R3}), where it is more likely that participants have already been presented with the same prior.
+
+Figure \ref{tab:R4} shows the fraction of false reports in each period for the prior of 0.5. If there is learning conditional on the number of times a participant has experienced a scenario, it should be most obvious in this figure. Across the information treatment, each participant experiences the prior of 0.5 four times -- twice as often as the priors of 0.7 and 0.3 and four times as often as priors 0.8 and 0.2. Not surprisingly, the error bars are much smaller compared to the other priors due to the higher frequencies across rounds. 
+
+There appear to be two trends in the false report rates, a decreasing trend for the first five period and an increasing trend for the last five. Before period 5, the fraction of false reports decreases as the experiment progresses, which is consistent with learning. However, the trend switches after period 5 and false reports tend to increase with each additional period. Given that participants are likely to have had some experience with the prior of 0.5 by period 6, false reports should continue to decrease. The inconsistency means that we cannot conclusively say that there are learning effects.  
+
+\subsection{Repetition Effects}
+Figure 2B of DVW shows the fraction of false reports for each prior. The figure shows that the prior of 0.5 has the lowest false report rates. However, this could be due to the additional experience with 0.5 arising from the imbalance in the number of times each prior was presented as explained above. Repeated experience with the problem can affect behavior (for example, there is evidence of the effects of repetition in risk elicitation), and since the analysis in the DVW paper aggregated reports by prior, it is possible that participants had fewer false reports in the priors they observed more frequently.
+
+In figure \ref{fig:fig2b_round_1}, we reproduce figure 2B of DVW, but considering only the first instance of each prior. Then, the aggregate behavior by prior made in the main paper can be compared with the behavior participants had when there was the same level of experience with each prior since we considered only the first time each prior was presented. 
+
+As expected, false report rates for 0.2 and 0.8 priors remain constant, as these priors were presented only once. For the 0.3 and 0.7 priors, there is a minimal decrease when considering only the first instance. Most interestingly, we observe no difference in false report rates for the 0.5 prior when considering only the first instance. Thus, considering only the first time a participant observes a prior or considering all instances (which results in more experience with the 0.5 prior) has no effect on the conclusion of the paper. In other words, more experience with different priors does not increase the fraction of false reports.
+
+Focusing only on the effects of repetition, aggregating by priors could mask learning effects across periods. In figure \ref{fig:fig2a_periods_treatments} panel (a), we reproduce figure 2A of DVW but with only the first instance of each prior. 
+We replicate the same analysis for the other treatments. In the original paper, figure 4A compares the Information, No-Information, and RCL treatments, while figure 6A compares Information, No-Information, and Feedback. 
+In figure \ref{fig:fig2a_periods_treatments}, we compare each treatment in different panels considering all the rounds (as in the original paper) against the aggregate fraction of false reports considering only when the prior was presented for the first time. Therefore, there is no difference between the original analysis and considering only the first round in period one. Also, in period 10, we only compare the original results with the fraction of false reports among participants that observed the prior 50 in the last period. Periods two to nine could include any combination of priors since they were presented randomly to the participants.
+There was no noticeable consistent difference between treatments when considering all rounds or the first round for each prior. When considering only the first round, the mistakes were small but consistently larger in the Information treatment. 
+The possible effects of learning are analyzed below. 
+
+In figure \ref{fig:rounds_priors_treatments}, we compare the fraction of false reports by the order in which each prior was presented. Each round in the x-axis represents the order in which the priors were observed among the 10 periods. For this reason, the 20 and 80 priors only have a point in round one since they were presented only once. As mentioned in the paper, it is clear that the increase in false reports is larger for prior differences from 50 in the Information and RCL treatments. Also, in the feedback condition, the fraction of false reports seems to increase with more experience.
+To compare if there was an effect in the aggregate, figure \ref{fig:rounds_stated_priors_treatments} shows the average stated prior in each prior by round. There is no effect of experience in the aggregate, but the bias towards the center can be observed, as mentioned by DVW.
+
+\subsection{Relaxing the Definition of False}
+DVW define a false report as any reported probability that deviates from the prior by any amount. This criteria may be more strict than necessary, especially given that small deviations make only a negligible impact on expected payoffs. To test for this, we reproduce figure 2B of the paper using various definitions of ``false''. Figure \ref{fig:2b} shows what figure 2B of DVW would look like if reports were considered to be correct as long as they were within $x\in \{2,5,10\}$ percentage points of the known prior, and false otherwise. 
+
+The first chart in figure \ref{fig:2b} uses the same definition of false as used by DVW, while the other three charts relax this definition by various degrees, as indicated in the figure. All four charts show a V-shaped pattern, with the fewest false reports when the prior is 50 percent. Moreover, the v-shape becomes more prominent as we relax the definition more, suggesting that the size of the deviation is greater for priors that are further away from 50 percent. Indeed, as figure \ref{fig:2b-size} shows, the average size of deviation is greater for priors that are farther from 50 percent. 
+
+% add write-up about figure 4 of the paper and how we replicate it (currently fig 9)
+
+In their analysis of false reports in the Feedback treatment, DVW write, ``While false reports start out at the same rate as No Information, over time the fraction of false reports increases, eventually reaching a level that is indistinguishable from that of the Information treatment.'' Figure 6A of their paper supports this finding. However, if we relax the definition of false to being more than five percentage points away from the known prior, this result does not hold. Figure \ref{fig: fig6 from DVW} shows what DVW's figure 6 would look like if the definition of false was modified as such. Panel B of DVW's figure 6, which is also reproduced in figure \ref{fig: fig6 from DVW}, focuses on the first two and last two periods. The finding that participants form beliefs differently about centered and non-centered priors holds true even under the relaxed definition of false. 
+
+Next, we check if false reports of non-centered priors exhibit a systematic pull toward the center in the information treatment. We do this by analyzing the distribution of all reported beliefs for the four non-centered priors, 20\%, 30\%, 70\%, and 80\%. These distributions are presented in figure \ref{fig:histograms}. The first thing that stands out in figure \ref{fig:histograms} is that the vast majority (between 50 and 60 percent) of reports tend to be correct for non-centered priors. Among all false reports, a greater proportion lies between the prior and the center than outside of that range. Moreover, the choice of 50\% is always the most popular report among false reports. This provides evidence for a systematic pull toward the center. However, a closer look at the data suggests that this evidence is considerably weak. First, the proportion of reports that lie between the prior and the center is only slightly greater. Second, while it is true that 50\% is the most popular false report, it is not significantly more popular than the second most popular choice. In fact, for the priors of 30\% and 80\%, there is a false report in the other direction that is just as popular as the false report of 50\%. For the prior of 30\%, beliefs of 20\% and 50\% were both reported 13 times each; for the prior of 80\%, beliefs of 50\%, 70\%, and 90\% had five reports each. 
+
+
+\section{Conclusion}
+
+In conclusion, our replication and extended analysis confirm the presence of a center bias in belief reporting, supporting DVW's findings and underscoring the need for improved belief elicitation methods. By replicating and extending their analysis, we confirm the presence of a center-bias effect in belief reporting, highlighting the limitations of the binarized scoring rule (BSR) method in achieving behavioral incentive compatibility. Our robustness checks further support the generalizability of these findings across different experimental conditions. These results underscore the necessity of developing belief elicitation methods that not only satisfy theoretical incentive compatibility but also ensure behavioral incentive compatibility. Moving forward, addressing these methodological challenges is essential for advancing the reliability and validity of experimental economics research.
+
+%Instructions
+%State the most important results of your work and what you have learned. You may also describe other empirical exercises that could be conducted by other replicators.
+
+
+
+
+\newpage
+\bibliographystyle{kluwer}
+\bibliography{biblio}
+
+\newpage
+\section{Figures}
+
+
+%fig2A replication in R
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{results/2a_rep.png}
+\caption{Fraction of False Reports by Period} 
+\label{fig:fig2a_rep}
+\end{figure}
+
+%fig2a for prior 0.2
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{results/2a_20.png}
+\caption{Fraction of False Reports by Period Conditional on Prior Probability of 0.2} \label{tab:R2}
+\label{fig:fig2a_20}
+\end{figure}
+
+%fig2a for 0.3
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{results/2a_30.png}
+\caption{Fraction of False Reports by Period Conditional on Prior Probability of 0.3} \label{tab:R3}
+\label{fig:fig2a_30}
+\end{figure}
+
+%fig2A for 0.5
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{results/2a_50.png}
+\caption{Fraction of False Reports by Period Conditional on Prior Probability of 0.5} \label{tab:R4}
+\label{fig:fig2a_50}
+\end{figure}
+
+%fig2A for 0.7
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{results/2a_70.png}
+\caption{Fraction of False Reports by Period Conditional on Prior Probability of 0.7} \label{tab:R5}
+\label{fig:fig2a_70}
+\end{figure}
+
+%fig2A for prior 0.8
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{results/2a_80.png}
+\caption{Fraction of False Reports by Period Conditional on Prior Probability of 0.8} \label{tab:R6}
+\label{fig:2a_80}
+\end{figure}
+
+% Fig 2b (information treatment) with relaxed definition of false
+\begin{figure}
+\centering
+\includegraphics[width=0.48\textwidth]{results/2b_0pp.pdf} 
+\includegraphics[width=0.48\textwidth]{results/2b_2pp.pdf} 
+\includegraphics[width=0.48\textwidth]{results/2b_5pp.pdf} 
+\includegraphics[width=0.48\textwidth]{results/2b_10pp.pdf} 
+\caption{Fraction of false reports in information treatment -- with relaxed definition of `false'} 
+\label{fig:2b}
+\end{figure}
+
+% Size of deviation (aka distance) in information treatment 
+\begin{figure}
+\centering
+\includegraphics[width=0.48\textwidth]{results/2b_size.pdf} 
+\caption{Size of deviation from prior} 
+\label{fig:2b-size}
+\end{figure}
+
+
+% Size of deviation (aka distance) in information treatment 
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{results/4_B.pdf} 
+\caption{False reports by treatment -- with relaxed definition of false \\ 
+(compare to Fig 4B of DVW)} 
+\label{fig:4b}
+\end{figure}
+
+% Do false beliefs have a pull toward the center?
+\begin{figure}
+\centering
+\includegraphics[width=0.48\textwidth]{results/histogram_20.pdf} 
+\includegraphics[width=0.48\textwidth]{results/histogram_30.pdf} \includegraphics[width=0.48\textwidth]{results/histogram_70.pdf} \includegraphics[width=0.48\textwidth]{results/histogram_80.pdf} 
+\caption{Distribution of reported beliefs, by prior} 
+\label{fig:histograms}
+\end{figure}
+
+
+% Replication of Fig 6 of DVW
+\begin{figure}
+\centering
+    \includegraphics[width=.48\textwidth]{results/Fig6a.pdf} 
+    \includegraphics[width=.48\textwidth]{results/Fig6b.pdf} 
+\caption{False reports in feedback treatment -- with relaxed definition of false \\
+(compare to Fig 6 of DVW)} 
+\label{fig: fig6 from DVW}
+\end{figure}
+
+
+% \begin{figure}
+% \centering
+% \includegraphics[scale=0.75]{results/fig2B_round_one.pdf}
+% \caption{Comparison of the fraction of false reports between all rounds and only the first one by prior. Notice that, in this comparison, the known priors 20 and 80 only have one round; therefore, they are the same.}
+% \label{fig:fig2b_round_1}
+% \end{figure}
+
+\begin{figure}[htbp]
+\centering
+
+% First row
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/fig2B_round_one_Information.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/fig2B_round_one_RCL.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+% Second row
+\vspace{0.5cm} % Adds vertical space between the rows
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/fig2B_round_one_No-Information.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/fig2B_round_one_Feedback.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+% Third row
+\vspace{0.5cm} % Adds vertical space between the rows
+\begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{results/fig2B_round_one_Description.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+\caption{Comparison of the fraction of false reports between all rounds and only the first one by prior. Notice that, in this comparison, the known priors 20 and 80 only have one round, and therefore, they are the same.}
+\label{fig:fig2b_round_1}
+\end{figure}
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=0.75\textwidth]{results/fig2A_round_one.pdf}
+% \caption{Comparison of the fraction of false reports between all rounds and only the first one by period.}
+% \label{fig:fig2a_periods}
+% \end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+
+% First row
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/fig2A_round_one_Information.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/fig2A_round_one_RCL.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+% Second row
+\vspace{0.5cm} % Adds vertical space between the rows
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/fig2A_round_one_No-Information.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/fig2A_round_one_Feedback.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+% Third row
+\vspace{0.5cm} % Adds vertical space between the rows
+\begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{results/fig2A_round_one_Description.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+\caption{Comparison of the fraction of false reports between all rounds and only the first one by period.}
+\label{fig:fig2a_periods_treatments}
+\end{figure}
+
+
+% \begin{figure}
+% \centering
+% \includegraphics[scale=0.75]{results/rounds_all_priors.pdf}
+% \caption{Comparison of the fraction of false reports between priors by round. Each round is the relative position of the prior being presented among the ten periods.}
+% \label{fig:rounds_priors}
+% \end{figure}
+
+\begin{figure}[htbp]
+\centering
+
+% First row
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/rounds_all_priors_Information.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/rounds_all_priors_RCL.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+% Second row
+\vspace{0.5cm} % Adds vertical space between the rows
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/rounds_all_priors_No-Information.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/rounds_all_priors_Feedback.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+% Third row
+\vspace{0.5cm} % Adds vertical space between the rows
+\begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{results/rounds_all_priors_Description.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+\caption{Comparison of the fraction of false reports between priors by round for each treatment. Each round is the relative position of the prior being presented among the ten periods.}
+\label{fig:rounds_priors_treatments}
+\end{figure}
+
+% \begin{figure}
+% \centering
+% \includegraphics[scale=0.75]{results/rounds_stated_prior.pdf}
+% \caption{Comparison of the stated prior between indicated priors by round. Each round is the relative position of the prior being presented among the ten periods.}
+% \label{fig:rounds_stated_priors}
+% \end{figure}
+
+\begin{figure}[htbp]
+\centering
+
+% First row
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/rounds_stated_prior_Information.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/rounds_stated_prior_RCL.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+% Second row
+\vspace{0.5cm} % Adds vertical space between the rows
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/rounds_stated_prior_No-Information.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{results/rounds_stated_prior_Feedback.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+% Third row
+\vspace{0.5cm} % Adds vertical space between the rows
+\begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{results/rounds_stated_prior_Description.pdf}
+    \captionof{subfigure}{}
+\end{minipage}
+
+\caption{Comparison of the stated prior between indicated priors by round for each treatment. Each round is the relative position of the prior being presented among the ten periods.}
+\label{fig:rounds_stated_priors_treatments}
+\end{figure}
+
+\section{Tables}
+
+% table 1: treatments 
+\input{Tables/treatments}
+%table: prior
+\input{Tables/t1} 
+
+
+\end{document} 

@@ -1,0 +1,33 @@
+
+
+\begin{table}[H]
+    \centering
+    \caption{Number of observations in each treatment by prior} \label{tab:table1}
+    \begin{threeparttable}
+        \footnotesize 
+        {
+	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+	\begin{tabular}{l*{1}{ccccccc}}
+		\toprule
+		Prior & Info & RCL & No Info  & Feedback(t=1,2) & Feedback(t=9,10) & Description   \\
+		\midrule
+		20         &      120 &         59 &      120   &      8  &   16  &  60 \\
+		\midrule
+		30         &      240 &        118 &      240   &      21  &   22 &  120 \\
+		\midrule
+		50         &      480 &        236 &      480   &      55  &   51 &  240 \\
+		\midrule
+		70         &      240 &        118 &      240   &      24  &   21 &  120 \\
+		\midrule
+		80         &      120 &         59 &      120   &      12  &   10 &  60 \\
+		\bottomrule
+	\end{tabular}
+}
+        \begin{tablenotes}
+            \scriptsize 
+            \item{Notes: The priors of participants differed by number of observations.
+            }
+        \end{tablenotes}  
+    \end{threeparttable}  
+    \label{tab:priors}
+\end{table} 
